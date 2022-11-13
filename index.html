@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>Gradiente</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <article class="intro">
+      <div id="opener">
+        <h1>Olá, </h1>
+        <p>
+            Meu nome é Ana Carolina Kawano, mas sou conhecida por Nana Kawano. Tenho 23 anos.
+            Nasci no Brasil, mas especificamente no interior de São Paulo, em uma cidade chamada São José dos Campos
+            Há quase 7 anos átras, junto com a minha mãe e irmã, decidimos iniciar uma aventura e nos mudarmos para o outro
+            lado do oceano, mais especificamente Braga-Portugal. Desde então vivemos cá. &#128512;
+            Sou uma completa amante da fotografia, vídeo, do som, e alem disso tambem sou uma mante do mundo.
+            Adoro juntar as minhas paixões : Viajar e "registar" &#9829;. Para verificar um pouco mais do meu trabalho, clique em " Saiba mais ".
+        </p>
+        <div><a href="https://www.pinterest.pt/nanakawano22/world-for-my-eyes/">Saiba mais</a></div>
+    </div>
+        <div class="slideshow-container">
+
+            <div class="mySlides fade">
+              <div class="numbertext">1 / 9</div>
+              <img src="braga.jpg" style="width:100%">
+              <div class="text">Braga-Portugal</div>
+            </div>
+            
+            <div class="mySlides fade">
+              <div class="numbertext">2 / 9</div>
+              <img src="paris.JPG" style="width:100%">
+              <div class="text">Paris- França</div>
+            </div>
+            
+            <div class="mySlides fade">
+              <div class="numbertext">3 / 9</div>
+              <img src="bolonha.jpg" style="width:100%">
+              <div class="text">Bolonha -Italia</div>
+            </div>
+            <div class="mySlides fade">
+                <div class="numbertext">4 / 9</div>
+                <img src="peniche.jpg" style="width:100%">
+                <div class="text">Peniche - Portugal</div>
+              </div>
+              <div class="mySlides fade">
+                <div class="numbertext">5 / 9</div>
+                <img src="paris2.JPG" style="width:100%">
+                <div class="text">Paris- França</div>
+              </div>
+              <div class="mySlides fade">
+                <div class="numbertext">6 / 9</div>
+                <img src="espanha.jpg" style="width:100%">
+                <div class="text">Sevilha - Espanha </div>
+              </div>
+              <div class="mySlides fade">
+                <div class="numbertext">7 / 9</div>
+                <img src="obidos.JPG" style="width:100%">
+                <div class="text">Óbidos- Portugal</div>
+              </div>
+
+              <div class="mySlides fade">
+                <div class="numbertext">8 / 9</div>
+                <img src="mota.jpg" style="width:100%">
+                <div class="text"></div>
+              </div>
+              <div class="mySlides fade">
+                <div class="numbertext">9 /9 </div>
+                <img src="porto.jpg" style="width:100%">
+                <div class="text">Porto- Portugal</div>
+              </div>
+              <a class="prev" onclick="plusSlides(-1)">❮</a>
+                <a class="next" onclick="plusSlides(1)">❯</a>
+                
+                </div>
+                <br>
+                
+                <div style="text-align:center">
+                  <span class="dot" onclick="currentSlide(1)"></span> 
+                  <span class="dot" onclick="currentSlide(2)"></span> 
+                  <span class="dot" onclick="currentSlide(3)"></span> 
+                </div>
+                
+                <script>
+                let slideIndex = 1;
+                showSlides(slideIndex);
+                
+                function plusSlides(n) {
+                  showSlides(slideIndex += n);
+                }
+                
+                function currentSlide(n) {
+                  showSlides(slideIndex = n);
+                }
+                
+                function showSlides(n) {
+                  let i;
+                  let slides = document.getElementsByClassName("mySlides");
+                  let dots = document.getElementsByClassName("dot");
+                  if (n > slides.length) {slideIndex = 1}    
+                  if (n < 1) {slideIndex = slides.length}
+                  for (i = 0; i < slides.length; i++) {
+                    slides[i].style.display = "none";  
+                  }
+                  for (i = 0; i < dots.length; i++) {
+                    dots[i].className = dots[i].className.replace(" active", "");
+                  }
+                  slides[slideIndex-1].style.display = "block";  
+                  dots[slideIndex-1].className += " active";
+                }
+                </script>
+
+         
+          
+        </script>
+       
+    </article>
+  </body>
+</html>
